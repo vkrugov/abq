@@ -37,9 +37,9 @@ class InitDatabase extends Migration
             $table->id();
             $table->string('name');
             $table->string('desc');
+            $table->integer('cost');
             $table->integer('product_type_id');
             $table->integer('gender_id');
-            $table->boolean('with_alcohol');
             $table->string('img');
             $table->integer('created_at');
             $table->integer('updated_at');
@@ -62,6 +62,7 @@ class InitDatabase extends Migration
             $table->integer('user_id');
             $table->string('note')->default('');
             $table->integer('confirm_at');
+            $table->integer('cost');
             $table->integer('sent_at');
             $table->integer('created_at');
             $table->integer('updated_at');
@@ -70,6 +71,7 @@ class InitDatabase extends Migration
             $table->id();
             $table->integer('product_id');
             $table->integer('order_id');
+            $table->integer('cost');
         });
         Schema::create('settings', function (Blueprint $table) {
             $table->id();

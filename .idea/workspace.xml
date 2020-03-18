@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc91265b-b024-4ebd-972e-5acb6c40c399" name="Default Changelist" comment="cors headers">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_03_15_192143_init_database.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_03_15_194823_init_default_data.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_03_15_195336_init_test_data.php" afterDir="false" />
+    <list default="true" id="cc91265b-b024-4ebd-972e-5acb6c40c399" name="Default Changelist" comment="init database and default data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_15_192143_init_database.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_15_192143_init_database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_15_195336_init_test_data.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_15_195336_init_test_data.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +45,20 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="abq: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="abq" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="abq: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="order: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="abq" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="abq: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="product: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -58,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_15_194823_init_default_data.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+            <state relative-caret-position="120">
+              <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
               <folding>
                 <element signature="e#7#52#0#PHP" expanded="true" />
               </folding>
@@ -68,10 +77,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProductController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_15_192143_init_database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="62" column="43" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="43" />
+            <state relative-caret-position="689">
+              <caret line="73" column="33" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
               <folding>
                 <element signature="e#7#52#0#PHP" expanded="true" />
               </folding>
@@ -82,7 +103,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="das://728a460a-b565-4b0b-873c-2cabd7125961/schema/abq/table/order">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="d831311b-da50-42ac-9083-04e1d226bc38">
+            <state projectRestartId="5aaead21-4dbd-4d73-b736-ddf65d7cda67">
               <filtering>
                 <filter text="" />
               </filtering>
@@ -91,9 +112,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://728a460a-b565-4b0b-873c-2cabd7125961/schema/abq/table/migrations">
+        <entry file="das://728a460a-b565-4b0b-873c-2cabd7125961/schema/abq/table/product">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="d831311b-da50-42ac-9083-04e1d226bc38">
+            <state projectRestartId="5aaead21-4dbd-4d73-b736-ddf65d7cda67">
               <filtering>
                 <filter text="" />
               </filtering>
@@ -101,10 +122,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="das://728a460a-b565-4b0b-873c-2cabd7125961/schema/abq/table/gender">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="d831311b-da50-42ac-9083-04e1d226bc38">
+            <state projectRestartId="5aaead21-4dbd-4d73-b736-ddf65d7cda67">
               <filtering>
                 <filter text="" />
               </filtering>
@@ -115,10 +136,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="das://728a460a-b565-4b0b-873c-2cabd7125961/schema/abq/table/settings">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="d831311b-da50-42ac-9083-04e1d226bc38">
-              <filtering>
-                <filter text="" />
-              </filtering>
+            <state projectRestartId="5aaead21-4dbd-4d73-b736-ddf65d7cda67">
+              <filtering />
             </state>
           </provider>
         </entry>
@@ -126,10 +145,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="das://728a460a-b565-4b0b-873c-2cabd7125961/schema/abq/table/user">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="d831311b-da50-42ac-9083-04e1d226bc38">
-              <filtering>
-                <filter text="" />
-              </filtering>
+            <state projectRestartId="5aaead21-4dbd-4d73-b736-ddf65d7cda67">
+              <filtering />
             </state>
           </provider>
         </entry>
@@ -137,19 +154,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="das://728a460a-b565-4b0b-873c-2cabd7125961/schema/abq/table/product_type">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="d831311b-da50-42ac-9083-04e1d226bc38">
-              <filtering>
-                <filter text="" />
-              </filtering>
+            <state projectRestartId="5aaead21-4dbd-4d73-b736-ddf65d7cda67">
+              <filtering />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_15_195336_init_test_data.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="22" column="100" selection-start-line="22" selection-start-column="100" selection-end-line="22" selection-end-column="100" />
+            <state relative-caret-position="131">
+              <caret line="22" column="48" lean-forward="true" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
               <folding>
                 <element signature="e#7#52#0#PHP" expanded="true" />
               </folding>
@@ -163,6 +178,7 @@
     <findStrings>
       <find>gender</find>
       <find>default</find>
+      <find>with</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -181,11 +197,11 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/routes/api.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/database/migrations/2020_03_15_194823_init_default_data.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2020_03_15_195336_init_test_data.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_03_15_192143_init_database.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_03_15_195336_init_test_data.php" />
       </list>
     </option>
   </component>
@@ -407,7 +423,8 @@
       <updated>1584274464260</updated>
       <workItem from="1584274467731" duration="718000" />
       <workItem from="1584282903866" duration="245000" />
-      <workItem from="1584283538335" duration="11146000" />
+      <workItem from="1584283538335" duration="12196000" />
+      <workItem from="1584561713241" duration="3637000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1584275172717</created>
@@ -423,17 +440,31 @@
       <option name="project" value="LOCAL" />
       <updated>1584283700270</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="init database and default data">
+      <created>1584307266410</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584307266410</updated>
+    </task>
+    <task id="LOCAL-00004" summary="init database and default data">
+      <created>1584307338137</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584307338137</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12109000" />
+    <option name="totallyTimeSpent" value="16796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="701" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18030304" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.18333334" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32962963" />
@@ -448,12 +479,12 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.48333332" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.2685185" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.2439394" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.2439394" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,7 +493,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="cors headers" />
-    <option name="LAST_COMMIT_MESSAGE" value="cors headers" />
+    <MESSAGE value="init database and default data" />
+    <option name="LAST_COMMIT_MESSAGE" value="init database and default data" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -519,13 +551,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -543,26 +569,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProductController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://728a460a-b565-4b0b-873c-2cabd7125961/schema/abq/table/product_to_cat">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="d831311b-da50-42ac-9083-04e1d226bc38">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://728a460a-b565-4b0b-873c-2cabd7125961/schema/abq/table/product">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="d831311b-da50-42ac-9083-04e1d226bc38">
           <filtering>
@@ -598,30 +605,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_15_195336_init_test_data.php">
+    <entry file="das://728a460a-b565-4b0b-873c-2cabd7125961/schema/abq/table/migrations">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="5aaead21-4dbd-4d73-b736-ddf65d7cda67">
+          <filtering />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://728a460a-b565-4b0b-873c-2cabd7125961/schema/abq/table/settings">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="5aaead21-4dbd-4d73-b736-ddf65d7cda67">
+          <filtering />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://728a460a-b565-4b0b-873c-2cabd7125961/schema/abq/table/product_type">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="5aaead21-4dbd-4d73-b736-ddf65d7cda67">
+          <filtering />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="22" column="100" selection-start-line="22" selection-start-column="100" selection-end-line="22" selection-end-column="100" />
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
-            <element signature="e#7#52#0#PHP" expanded="true" />
+            <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_15_194823_init_default_data.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-          <folding>
-            <element signature="e#7#52#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_15_192143_init_database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="62" column="43" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="43" />
+        <state relative-caret-position="120">
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
           <folding>
             <element signature="e#7#52#0#PHP" expanded="true" />
           </folding>
@@ -630,43 +648,7 @@
     </entry>
     <entry file="das://728a460a-b565-4b0b-873c-2cabd7125961/schema/abq/table/order">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="d831311b-da50-42ac-9083-04e1d226bc38">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://728a460a-b565-4b0b-873c-2cabd7125961/schema/abq/table/migrations">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="d831311b-da50-42ac-9083-04e1d226bc38">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://728a460a-b565-4b0b-873c-2cabd7125961/schema/abq/table/settings">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="d831311b-da50-42ac-9083-04e1d226bc38">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://728a460a-b565-4b0b-873c-2cabd7125961/schema/abq/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="d831311b-da50-42ac-9083-04e1d226bc38">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://728a460a-b565-4b0b-873c-2cabd7125961/schema/abq/table/product_type">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="d831311b-da50-42ac-9083-04e1d226bc38">
+        <state projectRestartId="5aaead21-4dbd-4d73-b736-ddf65d7cda67">
           <filtering>
             <filter text="" />
           </filtering>
@@ -675,10 +657,46 @@
     </entry>
     <entry file="das://728a460a-b565-4b0b-873c-2cabd7125961/schema/abq/table/gender">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="d831311b-da50-42ac-9083-04e1d226bc38">
+        <state projectRestartId="5aaead21-4dbd-4d73-b736-ddf65d7cda67">
           <filtering>
             <filter text="" />
           </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://728a460a-b565-4b0b-873c-2cabd7125961/schema/abq/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="5aaead21-4dbd-4d73-b736-ddf65d7cda67">
+          <filtering />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://728a460a-b565-4b0b-873c-2cabd7125961/schema/abq/table/product">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="5aaead21-4dbd-4d73-b736-ddf65d7cda67">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_15_192143_init_database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="689">
+          <caret line="73" column="33" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
+          <folding>
+            <element signature="e#7#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_15_195336_init_test_data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="22" column="48" lean-forward="true" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+          <folding>
+            <element signature="e#7#52#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
