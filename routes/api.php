@@ -18,4 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/users', 'ProductController@getProducts');
+Route::get('/products', 'ProductController@getProducts');
+Route::post('/cart/add', 'CartController@addToCart')->middleware('checkProduct', 'checkUser');

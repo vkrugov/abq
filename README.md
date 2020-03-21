@@ -14,6 +14,7 @@ Do next columns:
 - sudo chgrp -R www-data /var/www/abq.loc/
 - sudo chmod -R 775 /var/www/abq.loc/storage/
 - sudo chmod -R 777 /var/www/abq.loc/storage/logs
+- php artisan key:generate
 
 abq.loc.conf:
 

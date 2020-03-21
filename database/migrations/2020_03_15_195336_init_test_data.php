@@ -13,14 +13,20 @@ class InitTestData extends Migration
     public function up()
     {
         DB::table('user')->insertOrIgnore([
-            ['id' => 1, 'role_id' => 1, 'name' => 'Vladimir', 'last_name' => 'Krugov', 'email' => 'vkrugov11@gmail.com', 'password' => '123', 'gender_id' => '1', 'created_at' => 1584302277, 'updated_at' => 1584302277],
-            ['id' => 2, 'role_id' => 1, 'name' => 'Sasha', 'last_name' => 'Bondarenko', 'email' => 'sasha.bond@gmail.com', 'password' => '123', 'gender_id' => '2', 'created_at' => 1584302277, 'updated_at' => 1584302277],
-            ['id' => 3, 'role_id' => 1, 'name' => 'Ivan', 'last_name' => 'Ivanov', 'email' => 'ivan123@gmail.com', 'password' => '123', 'gender_id' => '1', 'created_at' => 1584302277, 'updated_at' => 1584302277],
+            ['id' => 1, 'role_id' => 1, 'name' => 'Vladimir', 'last_name' => 'Krugov', 'email' => 'vkrugov11@gmail.com', 'password' => '123', 'token' => '123', 'gender_id' => '1', 'created_at' => 1584302277, 'updated_at' => 1584302277],
+            ['id' => 2, 'role_id' => 1, 'name' => 'Sasha', 'last_name' => 'Bondarenko', 'email' => 'sasha.bond@gmail.com', 'password' => '123', 'token' => '123', 'gender_id' => '2', 'created_at' => 1584302277, 'updated_at' => 1584302277],
+            ['id' => 3, 'role_id' => 1, 'name' => 'Ivan', 'last_name' => 'Ivanov', 'email' => 'ivan123@gmail.com', 'password' => '123', 'token' => '123', 'gender_id' => '1', 'created_at' => 1584302277, 'updated_at' => 1584302277],
         ]);
         DB::table('product')->insertOrIgnore([
-            ['id' => 1, 'name' => 'Test Bouquet', 'desc' => 'Test bouquet', 'cost' => 650, 'product_type_id' => 1, 'img' => '', 'created_at' => 1584302277, 'updated_at' => 1584302277],
-            ['id' => 2, 'name' => 'Test Box', 'desc' => 'Test box', 'cost' => 750, 'product_type_id' => 2, 'img' => '', 'created_at' => 1584302277, 'updated_at' => 1584302277],
-            ['id' => 3, 'name' => 'Test Bouquet 2', 'desc' => 'Test bouquet', 'cost' => 600, 'product_type_id' => 1, 'img' => '', 'created_at' => 1584302277, 'updated_at' => 1584302277],
+            ['id' => 1, 'name' => 'Test Bouquet', 'desc' => 'Test bouquet', 'cost' => 650, 'product_type_id' => 1, 'img' => null, 'created_at' => 1584302277, 'updated_at' => 1584302277],
+            ['id' => 2, 'name' => 'Test Box', 'desc' => 'Test box', 'cost' => 750, 'product_type_id' => 2, 'img' => null, 'created_at' => 1584302277, 'updated_at' => 1584302277],
+            ['id' => 3, 'name' => 'Test Bouquet 3', 'desc' => 'Test bouquet', 'cost' => 600, 'product_type_id' => 1, 'img' => null, 'created_at' => 1584302277, 'updated_at' => 1584302277],
+            ['id' => 4, 'name' => 'Test Bouquet 4', 'desc' => 'Test bouquet', 'cost' => 600, 'product_type_id' => 1, 'img' => null, 'created_at' => 1584302277, 'updated_at' => 1584302277],
+            ['id' => 5, 'name' => 'Test Bouquet 5', 'desc' => 'Test bouquet', 'cost' => 600, 'product_type_id' => 1, 'img' => null, 'created_at' => 1584302277, 'updated_at' => 1584302277],
+            ['id' => 6, 'name' => 'Test Bouquet 6', 'desc' => 'Test bouquet', 'cost' => 600, 'product_type_id' => 1, 'img' => null, 'created_at' => 1584302277, 'updated_at' => 1584302277],
+            ['id' => 7, 'name' => 'Test Bouquet 7', 'desc' => 'Test bouquet', 'cost' => 600, 'product_type_id' => 1, 'img' => null, 'created_at' => 1584302277, 'updated_at' => 1584302277],
+            ['id' => 8, 'name' => 'Test Bouquet 8', 'desc' => 'Test bouquet', 'cost' => 600, 'product_type_id' => 1, 'img' => null, 'created_at' => 1584302277, 'updated_at' => 1584302277],
+            ['id' => 9, 'name' => 'Test Bouquet 9', 'desc' => 'Test bouquet', 'cost' => 600, 'product_type_id' => 1, 'img' => null, 'created_at' => 1584302277, 'updated_at' => 1584302277],
         ]);
         DB::table('product_to_cat')->insertOrIgnore([
             ['product_id' => 1, 'cat_id' => 1],
@@ -28,11 +34,11 @@ class InitTestData extends Migration
             ['product_id' => 1, 'cat_id' => 1],
         ]);
         DB::table('order')->insertOrIgnore([
-            ['id' => 1, 'user_id' => 1, 'note' => 'test',  'cost' => 2050, 'confirm_at' => 1584302277,  'sent_at' => 1584302277,  'created_at' => 1584302277,  'updated_at' => 1584302277],
-            ['id' => 2, 'user_id' => 2, 'note' => 'test', 'cost' => 750, 'confirm_at' => null,  'sent_at' => null,  'created_at' => 1584302277,  'updated_at' => 1584302277],
-            ['id' => 3, 'user_id' => 1, 'note' => 'test', 'cost' => 600, 'confirm_at' => 1584302277,  'sent_at' => null,  'created_at' => 1584302277,  'updated_at' => 1584302277],
+            ['id' => 1, 'user_id' => 1, 'note' => 'test', 'confirm_at' => 1584302277,  'sent_at' => 1584302277,  'created_at' => 1584302277,  'updated_at' => 1584302277],
+            ['id' => 2, 'user_id' => 2, 'note' => 'test', 'confirm_at' => null,  'sent_at' => null,  'created_at' => 1584302277,  'updated_at' => 1584302277],
+            ['id' => 3, 'user_id' => 1, 'note' => 'test', 'confirm_at' => 1584302277,  'sent_at' => null,  'created_at' => 1584302277,  'updated_at' => 1584302277],
         ]);
-        DB::table('order_products')->insertOrIgnore([
+        DB::table('order_product')->insertOrIgnore([
             ['order_id' => 1, 'product_id' => 1, 'cost' => 650],
             ['order_id' => 1, 'product_id' => 1, 'cost' => 650],
             ['order_id' => 1, 'product_id' => 2, 'cost' => 750],
