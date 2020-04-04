@@ -13,9 +13,9 @@ class InitTestData extends Migration
     public function up()
     {
         DB::table('user')->insertOrIgnore([
-            ['id' => 1, 'role_id' => 1, 'name' => 'Vladimir', 'last_name' => 'Krugov', 'email' => 'vkrugov11@gmail.com', 'password' => '123', 'token' => '123', 'gender_id' => '1', 'created_at' => 1584302277, 'updated_at' => 1584302277],
-            ['id' => 2, 'role_id' => 1, 'name' => 'Sasha', 'last_name' => 'Bondarenko', 'email' => 'sasha.bond@gmail.com', 'password' => '123', 'token' => '123', 'gender_id' => '2', 'created_at' => 1584302277, 'updated_at' => 1584302277],
-            ['id' => 3, 'role_id' => 1, 'name' => 'Ivan', 'last_name' => 'Ivanov', 'email' => 'ivan123@gmail.com', 'password' => '123', 'token' => '123', 'gender_id' => '1', 'created_at' => 1584302277, 'updated_at' => 1584302277],
+            ['id' => 1, 'role_id' => 1, 'first_name' => 'Vladimir', 'last_name' => 'Krugov', 'email' => 'vkrugov11@gmail.com', 'password' => '123', 'gender_id' => '1', 'created_at' => 1584302277, 'updated_at' => 1584302277],
+            ['id' => 2, 'role_id' => 1, 'first_name' => 'Sasha', 'last_name' => 'Bondarenko', 'email' => 'sasha.bond@gmail.com', 'password' => '123', 'gender_id' => '2', 'created_at' => 1584302277, 'updated_at' => 1584302277],
+            ['id' => 3, 'role_id' => 1, 'first_name' => 'Ivan', 'last_name' => 'Ivanov', 'email' => 'ivan123@gmail.com', 'password' => '123', 'gender_id' => '1', 'created_at' => 1584302277, 'updated_at' => 1584302277],
         ]);
         DB::table('product')->insertOrIgnore([
             ['id' => 1, 'name' => 'Test Bouquet', 'desc' => 'Test bouquet', 'cost' => 650, 'product_type_id' => 1, 'img' => null, 'created_at' => 1584302277, 'updated_at' => 1584302277],

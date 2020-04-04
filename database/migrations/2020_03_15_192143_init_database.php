@@ -28,11 +28,10 @@ class InitDatabase extends Migration
         Schema::create('user', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('role_id')->unsigned();
-            $table->string('name');
+            $table->string('first_name');
             $table->string('last_name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('token');
             $table->bigInteger('gender_id')->unsigned();
             $table->integer('created_at');
             $table->integer('updated_at');
@@ -52,7 +51,7 @@ class InitDatabase extends Migration
             $table->string('desc');
             $table->integer('cost');
             $table->bigInteger('product_type_id')->unsigned();
-            $table->string('img')->default(null);
+            $table->string('img')->nullable();
             $table->integer('created_at');
             $table->integer('updated_at');
 
@@ -84,7 +83,7 @@ class InitDatabase extends Migration
         Schema::create('order', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id')->unsigned();
-            $table->string('note')->default('');
+            $table->string('note')->nullable();
             $table->integer('confirm_at');
             $table->integer('sent_at');
             $table->integer('created_at');
