@@ -15,6 +15,7 @@ Do next columns:
 - sudo chmod -R 775 /var/www/abq.loc/storage/
 - sudo chmod -R 777 /var/www/abq.loc/storage/logs
 - php artisan key:generate
+- php artisan jwt:secret
 
 abq.loc.conf:
 

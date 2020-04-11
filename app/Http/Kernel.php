@@ -40,6 +40,8 @@ class Kernel extends HttpKernel
 
         'api' => [
             'throttle:60,1',
+
+            \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\Cors::class,
         ],
@@ -64,7 +66,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'checkProduct' =>  \App\Http\Middleware\api\CheckProduct::class,
-        'checkUser' =>  \App\Http\Middleware\api\CheckUser::class,
         'checkApiRegister' =>  \App\Http\Middleware\api\CheckRegister::class,
         'checkApiLogin' =>  \App\Http\Middleware\api\CheckLogin::class,
     ];

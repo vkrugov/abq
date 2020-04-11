@@ -21,6 +21,8 @@ class CheckRegister
         $validator = Validator::make($request->all(), [
             'first_name' => 'required|max:255',
             'last_name' => 'required|max:255',
+            'phone' => 'required',
+            'birthday_at' => 'required',
             'email' => 'required|email|unique:user',
             'gender' => 'required|in:' . implode(',', GenderEnum::toArray()),
             'password' => 'required|min:6|confirmed',
@@ -28,7 +30,7 @@ class CheckRegister
 
         if ($validator->fails()) {
             return response()->json([
-                    'fail' => false,
+                    'success' => false,
                     'errors' => $validator->errors()->getMessages(),
                 ]);
         }

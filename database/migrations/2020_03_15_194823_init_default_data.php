@@ -12,10 +12,6 @@ class InitDefaultData extends Migration
      */
     public function up()
     {
-        DB::table('gender')->insert([
-            ['id' => 1, 'name' => 'male'],
-            ['id' => 2, 'name' => 'female'],
-        ]);
         DB::table('product_type')->insert([
             ['id' => 1, 'name' => 'bouquet'],
             ['id' => 2, 'name' => 'box'],

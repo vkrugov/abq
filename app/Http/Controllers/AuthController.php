@@ -25,8 +25,11 @@ class AuthController extends Controller
     {
         $user = new User();
         $user->first_name = $request->first_name;
+        $user->first_name = $request->first_name;
         $user->email = $request->email;
+        $user->phone= preg_replace("/[^0-9]/", '', $request->phone);
         $user->last_name = $request->last_name;
+        $user->birthday_at = strtotime($request->birthday_at);
         $user->password = Hash::make($request->password);
         $user->role_id = RoleEnum::CUSTOMER;
         $user->gender_id = $request->gender;
@@ -66,7 +69,7 @@ class AuthController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function me()
+    public function me(Request $request)
     {
         return response()->json(UserHelper::getInfo(auth()->user()));
     }

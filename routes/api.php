@@ -14,18 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::post('/register', 'AuthController@register')->middleware('checkApiRegister');
-Route::post('/login', 'AuthController@login')->middleware('checkApiLogin');
-Route::post('/logout', 'AuthController@logout');*/
-
 Route::get('/products', 'ProductController@getProducts');
-Route::post('/cart/add', 'CartController@addToCart')->middleware('checkProduct', 'checkUser');
+Route::get('/genders', 'UserController@getGenders');
+Route::post('/cart/add', 'CartController@addToCart')->middleware('checkProduct');
+Route::post('/cart/delete-item', 'CartController@deleteItem')->middleware('checkProduct');
+Route::post('/cart/delete-items', 'CartController@deleteItems')->middleware('checkProduct');
+Route::post('/cart/clear-cart', 'CartController@clearCart');
 
 Route::group([
     'prefix' => 'auth'
 ], function () {
     Route::post('login', 'AuthController@login');
-    Route::post('register', 'AuthController@registration')->middleware('checkApiRegister');;
+    Route::post('register', 'AuthController@registration')->middleware('checkApiRegister');
     Route::post('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');
     Route::post('me', 'AuthController@me');

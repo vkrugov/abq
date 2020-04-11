@@ -13,11 +13,6 @@ class InitDatabase extends Migration
      */
     public function up()
     {
-        //init gender
-        Schema::create('gender', function (Blueprint $table) {
-            $table->id();
-            $table->string('name')->unique();
-        });
         //init role
         Schema::create('role', function (Blueprint $table) {
             $table->id();
@@ -31,13 +26,14 @@ class InitDatabase extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email')->unique();
+            $table->integer('phone');
             $table->string('password');
-            $table->bigInteger('gender_id')->unsigned();
+            $table->integer('gender_id');
+            $table->integer('birthday_at');
             $table->integer('created_at');
             $table->integer('updated_at');
 
             $table->foreign('role_id')->references('id')->on('role');
-            $table->foreign('gender_id')->references('id')->on('gender');
         });
 
         //init product and categories
@@ -117,7 +113,6 @@ class InitDatabase extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
-        Schema::dropIfExists('gender');
         Schema::dropIfExists('cart');
         Schema::dropIfExists('role');
         Schema::dropIfExists('product');
