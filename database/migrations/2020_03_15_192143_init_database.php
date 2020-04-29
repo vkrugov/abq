@@ -26,7 +26,7 @@ class InitDatabase extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email')->unique();
-            $table->integer('phone');
+            $table->string('phone');
             $table->string('password');
             $table->integer('gender_id');
             $table->integer('birthday_at');
@@ -44,7 +44,7 @@ class InitDatabase extends Migration
         Schema::create('product', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('desc');
+            $table->text('desc');
             $table->integer('cost');
             $table->bigInteger('product_type_id')->unsigned();
             $table->string('img')->nullable();

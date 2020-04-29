@@ -5,7 +5,6 @@ namespace App\Http\Middleware\api;
 use App\Enums\GenderEnum;
 use Closure;
 use Illuminate\Support\Facades\Validator;
-use Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException;
 
 class CheckRegister
 {

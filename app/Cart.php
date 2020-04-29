@@ -13,4 +13,13 @@ class Cart extends Model
     public $product_id;
 
     public $timestamps = false;
+
+    public static function addProducts($products) {
+        foreach ($products as $product) {
+            Cart::create([
+                'user_id' => auth()->user()->id,
+                'product_id' => $product
+            ]);
+        }
+    }
 }

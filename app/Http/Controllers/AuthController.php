@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Cart;
 use App\Enums\RoleEnum;
 use App\helpers\UserHelper;
 use Illuminate\Http\Request;
@@ -38,6 +39,10 @@ class AuthController extends Controller
 
         $token = auth()->attempt(request(['email', 'password']));
 
+        if (!empty($request->cart)) {
+            Cart::addProducts($request->cart);
+        }
+
         return response()->json([
             'user' => UserHelper::getInfo(auth()->user()),
             'token' => $token,
@@ -60,6 +65,7 @@ class AuthController extends Controller
         return response()->json([
             'user' => UserHelper::getInfo(auth()->user()),
             'token' => $token,
+            'cart' =>  Cart::where('user_id', auth()->user()->id)->pluck('product_id')->toarray()
         ]);
 
     }

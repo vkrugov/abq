@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/products', 'ProductController@getProducts');
 Route::get('/genders', 'UserController@getGenders');
+Route::get('/product-types', 'ProductController@getProductTypes');
 Route::post('/cart/add', 'CartController@addToCart')->middleware('checkProduct');
 Route::post('/cart/delete-item', 'CartController@deleteItem')->middleware('checkProduct');
 Route::post('/cart/delete-items', 'CartController@deleteItems')->middleware('checkProduct');
